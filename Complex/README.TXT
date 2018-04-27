@@ -19,6 +19,7 @@ public class Complex
     public Complex scale(double b) // multiplies this Complex number by a real number b
     public Complex mult(Complex b) // multiplies this Complex number by Complex number b
     public Complex div(Complex b) // divides this Complex number by Complex number b
+    public double angle() // returns the angle, in radians, of the line from the origin to this Complex number
     
     /** static methods **/
     public static Complex add(Complex a, Complex b) // returns the sum of Complex numbers a and b
@@ -29,6 +30,7 @@ public class Complex
     public static Complex mult(Complex a, Complex b)  // multiplies Complex number a by Complex number b
     public static Complex div(Complex a, Complex b) // divides Complex number a by Complex number b
     public static Complex exp(Complex a) // raises e to the power of Complex number a
+    public static double angle(Complex a) // returns the angle, in radians, of the line from the origin to Complex number a
     public static void mainStatic() // tester for static methods
     public static void mainObjecty() // tester for nonstatic methods
 }
