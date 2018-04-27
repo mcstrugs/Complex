@@ -57,6 +57,11 @@ public class Complex
     {
         return Complex.div(this,b);
     }
+    
+    public double angle()
+    {
+        return Complex.angle(this);
+    }
 
     /** static methods **/
     public static Complex add(Complex a, Complex b)
@@ -101,6 +106,11 @@ public class Complex
         double real = a.getReal();
         return new Complex(Math.exp(real)*Math.cos(imag) , Math.exp(real)*Math.sin(imag));
     }
+    
+    public static double angle(Complex a)
+    {
+        return Math.atan2(a.getImag(),a.getReal());
+    }
 
     public static void mainStatic()
     {
@@ -115,6 +125,7 @@ public class Complex
         System.out.println("B Imag: "+b.getImag());
         System.out.println("A abs: " + Complex.abs(a));
         System.out.println("B abs: " + Complex.abs(b));
+        System.out.println("A angle: " + Complex.angle(a));
         System.out.println("Add: "+Complex.add(a,b));
         System.out.println("Sub: "+Complex.sub(a,b));
         System.out.println("Mult: "+Complex.mult(a,b));
@@ -136,6 +147,7 @@ public class Complex
         System.out.println("B Imag: "+b.getImag());
         System.out.println("A abs: " + a.abs(a));
         System.out.println("B abs: " + b.abs(b));
+        System.out.println("A angle: " + a.angle());
         System.out.println("Add: "+a.add(b));
         System.out.println("Sub: "+a.sub(b));
         System.out.println("Mult: "+a.mult(b));
