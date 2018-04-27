@@ -22,7 +22,43 @@ public class Complex
     {
         return "" + real + " + " +  imag + "i";
     }
+    
+    public Complex add(Complex b)
+    {
+        return Complex.add(this,b);
+    }
+    
+    public Complex sub(Complex b)
+    {
+        return Complex.sub(this,b);
+    }
+    
+    public double abs()
+    {
+        return Complex.abs(this);
+    }
+    
+    public Complex conj()
+    {
+        return Complex.conj(this);
+    }
+    
+    public Complex scale(double b)
+    {
+        return Complex.scale(this,b);
+    }
+    
+    public Complex mult(Complex b)
+    {
+        return Complex.mult(this,b);
+    }
+    
+    public Complex div(Complex b)
+    {
+        return Complex.div(this,b);
+    }
 
+    /** static methods **/
     public static Complex add(Complex a, Complex b)
     {
         return new Complex(a.getReal() + b.getReal(),a.getImag() + b.getImag());
@@ -66,7 +102,7 @@ public class Complex
         return new Complex(Math.exp(real)*Math.cos(imag) , Math.exp(real)*Math.sin(imag));
     }
 
-    public static void main()
+    public static void mainStatic()
     {
         Complex a = new Complex(Math.sqrt(.5),Math.sqrt(.5));
         Complex b = new Complex(Math.sqrt(.75),.5);
@@ -83,6 +119,27 @@ public class Complex
         System.out.println("Sub: "+Complex.sub(a,b));
         System.out.println("Mult: "+Complex.mult(a,b));
         System.out.println("Div: "+Complex.div(a,b));
+        System.out.println("Exp: "+Complex.exp(a));
+        System.out.println("e^ipi: " + Complex.exp(new Complex(0,Math.PI)));
+    }
+    
+    public static void mainObjecty()
+    {
+        Complex a = new Complex(Math.sqrt(.5),Math.sqrt(.5));
+        Complex b = new Complex(Math.sqrt(.75),.5);
+        System.out.println(a);
+        System.out.println(b);
+        System.out.println("A Conj: "+a.conj(a));
+        System.out.println("A Real: "+a.getReal());
+        System.out.println("B Real: "+b.getReal());
+        System.out.println("B Imag: "+a.getImag());
+        System.out.println("B Imag: "+b.getImag());
+        System.out.println("A abs: " + a.abs(a));
+        System.out.println("B abs: " + b.abs(b));
+        System.out.println("Add: "+a.add(b));
+        System.out.println("Sub: "+a.sub(b));
+        System.out.println("Mult: "+a.mult(b));
+        System.out.println("Div: "+a.div(b));
         System.out.println("Exp: "+Complex.exp(a));
         System.out.println("e^ipi: " + Complex.exp(new Complex(0,Math.PI)));
     }
