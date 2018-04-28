@@ -142,7 +142,7 @@ public class Complex
         System.out.println("A Real: "+a.getReal());
         System.out.println("B Real: "+b.getReal());
         System.out.println("B Imag: "+a.getImag());
-        System.out.println("B Imag: "+b.getImag());
+        System.out.println("A Imag: "+b.getImag());
         System.out.println("A abs: " + Complex.abs(a));
         System.out.println("B abs: " + Complex.abs(b));
         System.out.println("A angle: " + Complex.angle(a));
@@ -153,6 +153,7 @@ public class Complex
         System.out.println("Exp: "+Complex.exp(a));
         System.out.println("Ln: "+Complex.ln(a));
         System.out.println("a^b "+Complex.pow(a,b));
+        System.out.println("i^i "+Complex.pow(new Complex(0,1),new Complex(0,1)));
         System.out.println("e^ipi: " + Complex.exp(new Complex(0,Math.PI)));
     }
     
@@ -165,7 +166,7 @@ public class Complex
         System.out.println("A Conj: "+a.conj(a));
         System.out.println("A Real: "+a.getReal());
         System.out.println("B Real: "+b.getReal());
-        System.out.println("B Imag: "+a.getImag());
+        System.out.println("A Imag: "+a.getImag());
         System.out.println("B Imag: "+b.getImag());
         System.out.println("A abs: " + a.abs(a));
         System.out.println("B abs: " + b.abs(b));
