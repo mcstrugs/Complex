@@ -20,6 +20,9 @@ public class Complex
     public Complex mult(Complex b) // multiplies this Complex number by Complex number b
     public Complex div(Complex b) // divides this Complex number by Complex number b
     public double angle() // returns the angle, in radians, of the line from the origin to this Complex number
+    public Complex ln() // returns the natural logarithm of this Complex number
+    public Complex pow(Complex a, Complex b) // returns this Complex number raised to the power of Complex number b
+    
     
     /** static methods **/
     public static Complex add(Complex a, Complex b) // returns the sum of Complex numbers a and b
@@ -31,6 +34,8 @@ public class Complex
     public static Complex div(Complex a, Complex b) // divides Complex number a by Complex number b
     public static Complex exp(Complex a) // raises e to the power of Complex number a
     public static double angle(Complex a) // returns the angle, in radians, of the line from the origin to Complex number a
+    public static Complex ln(Complex a) // returns the natural logarithm of Complex number a
+    public static Complex pow(Complex a, Complex b) // returns Complex number a raised to the power of Complex number b
     public static void mainStatic() // tester for static methods
     public static void mainObjecty() // tester for nonstatic methods
 }
