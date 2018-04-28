@@ -176,6 +176,7 @@ public class Complex
         System.out.println("Div: "+a.div(b));
         System.out.println("Exp: "+Complex.exp(a));
         System.out.println("Ln: "+a.ln());
+        System.out.println("a^b "+a.pow(b));
         System.out.println("e^ipi: " + Complex.exp(new Complex(0,Math.PI)));
     }
 }
