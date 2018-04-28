@@ -62,6 +62,16 @@ public class Complex
     {
         return Complex.angle(this);
     }
+    
+    public Complex ln()
+    {
+        return Complex.ln(this);
+    }
+    
+    public Complex pow(Complex b)
+    {
+        return Complex.pow(this,b);
+    }
 
     /** static methods **/
     public static Complex add(Complex a, Complex b)
@@ -76,7 +86,7 @@ public class Complex
     
     public static double abs(Complex a)
     {
-        return Math.sqrt(a.getReal()*a.getReal() + a.getImag()*a.getImag());
+        return Math.hypot(a.getReal(),a.getImag());
     }
     
     public static Complex conj(Complex a)
@@ -111,6 +121,16 @@ public class Complex
     {
         return Math.atan2(a.getImag(),a.getReal());
     }
+    
+    public static Complex ln(Complex a)
+    {
+        return new Complex(Math.log(Complex.abs(a)),Complex.angle(a));
+    }
+    
+    public static Complex pow(Complex a, Complex b)
+    {
+        return Complex.exp(Complex.mult(Complex.ln(a),b));
+    }
 
     public static void mainStatic()
     {
@@ -131,6 +151,8 @@ public class Complex
         System.out.println("Mult: "+Complex.mult(a,b));
         System.out.println("Div: "+Complex.div(a,b));
         System.out.println("Exp: "+Complex.exp(a));
+        System.out.println("Ln: "+Complex.ln(a));
+        System.out.println("a^b "+Complex.pow(a,b));
         System.out.println("e^ipi: " + Complex.exp(new Complex(0,Math.PI)));
     }
     
@@ -153,6 +175,7 @@ public class Complex
         System.out.println("Mult: "+a.mult(b));
         System.out.println("Div: "+a.div(b));
         System.out.println("Exp: "+Complex.exp(a));
+        System.out.println("Ln: "+a.ln());
         System.out.println("e^ipi: " + Complex.exp(new Complex(0,Math.PI)));
     }
 }
