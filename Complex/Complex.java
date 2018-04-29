@@ -2,6 +2,11 @@ public class Complex
 {
     private double real;
     private double imag;
+    public static Complex I = new Complex(0,1);
+    public static Complex NI = new Complex(0,-1);
+    public static Complex ZERO = new Complex(0,0);
+    public static Complex ONE = new Complex(1,0);
+    public static Complex NONE = new Complex(-1,0);
     public Complex(double r, double i)
     {
         real = r;
@@ -153,7 +158,7 @@ public class Complex
         System.out.println("Exp: "+Complex.exp(a));
         System.out.println("Ln: "+Complex.ln(a));
         System.out.println("a^b "+Complex.pow(a,b));
-        System.out.println("i^i "+Complex.pow(new Complex(0,1),new Complex(0,1)));
+        System.out.println("i^i "+Complex.pow(Complex.I,Complex.I));
         System.out.println("e^ipi: " + Complex.exp(new Complex(0,Math.PI)));
     }
     
@@ -172,12 +177,13 @@ public class Complex
         System.out.println("B abs: " + b.abs(b));
         System.out.println("A angle: " + a.angle());
         System.out.println("Add: "+a.add(b));
-        System.out.println("Sub: "+a.sub(b));
+        System.out.println("Sub: "+a.sub(b));  
         System.out.println("Mult: "+a.mult(b));
         System.out.println("Div: "+a.div(b));
         System.out.println("Exp: "+Complex.exp(a));
         System.out.println("Ln: "+a.ln());
         System.out.println("a^b "+a.pow(b));
+        System.out.println("i^i "+ Complex.I.pow(Complex.I));
         System.out.println("e^ipi: " + Complex.exp(new Complex(0,Math.PI)));
     }
 }
