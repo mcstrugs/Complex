@@ -2,11 +2,11 @@ public class Complex
 {
     private double real;
     private double imag;
-    public static Complex I = new Complex(0,1);
-    public static Complex NI = new Complex(0,-1);
-    public static Complex ZERO = new Complex(0,0);
-    public static Complex ONE = new Complex(1,0);
-    public static Complex NONE = new Complex(-1,0);
+    public static final Complex I = new Complex(0,1);
+    public static final Complex NI = new Complex(0,-1);
+    public static final Complex ZERO = new Complex(0,0);
+    public static final Complex ONE = new Complex(1,0);
+    public static final Complex NONE = new Complex(-1,0);
     public Complex(double r, double i)
     {
         real = r;
